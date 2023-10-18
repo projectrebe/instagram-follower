@@ -1,12 +1,9 @@
 import './App.css';
+import InstagramFollower from './component/InstagramFollower.js'
 
 function App() {
   return (
-    <div className="App">
-      <center>
-        Count Your Instagram followers
-      </center>
-    </div>
+    <InstagramFollower />
   );
 }
 

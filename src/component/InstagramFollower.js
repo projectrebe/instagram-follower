@@ -1,25 +1,48 @@
-import React, { useEffect, useState } from 'react'
-
+import React, { useState } from 'react'
+import axios from 'axios'
 const InstagramFollower = () => {
     const [name, setName] = useState('')
     const [count, setCount] = useState()
     // let;
-    const getCount = (e) => {
+    const getCount = async (e) => {
         e.preventDefault();
-        console.log("sdf");
-        setCount(5)
-    }
-    useEffect(() => {
+        // console.log("sdf");
 
-    }, [count])
+        const options = {
+            method: 'GET',
+            url: `https://instagram-profile1.p.rapidapi.com/getprofileinfo/${name}`,
+            headers: {
+                'X-RapidAPI-Key': '805d2fcbd4msh43077584510c2aep1360cajsnfe2cd36cb03a',
+                'X-RapidAPI-Host': 'instagram-profile1.p.rapidapi.com'
+            }
+        };
+
+        try {
+            console.log('entered');
+            const response = await axios.request(options);
+            console.log(response.data);
+            setCount(response.data.followers);
+        } catch (error) {
+            console.error(error);
+        }
+
+    }
+
+
+
+
+
+
+
     return (
-        <div className='container w-50' >
+        <div className='container w-70 border border-primary d-flex flex-column justify-content-center align-items-center' >
             <h1>Number of followers : {count}</h1>
             <form onSubmit={getCount}>
                 <div className="mb-3">
                     <label className="form-label">username</label>
                     <input type="text" className="form-control" id="username" aria-describedby="emailHelp" value={name}
                         onChange={(e) => setName(e.target.value)}
+                        required
                     />
 
                 </div>

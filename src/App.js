@@ -1,7 +1,7 @@
 import './App.css';
 import InstagramFollower from './component/InstagramFollower/InstagramFollower.js'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './component/InstagramFollower/Navbar';
+import Navbar from './component/Navbar';
 import User from './component/User/User.js'
 function App() {
   return (

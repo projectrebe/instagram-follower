@@ -25,7 +25,11 @@ const User = () => {
 
     }, [dispatch]);
 
-
+    const formatDate = (inputDate) => {
+        const options = { year: "numeric", month: "short", day: "numeric" };
+        const date = new Date(inputDate);
+        return date.toLocaleDateString("en-US", options);
+    };
 
     return (
         <div className="main-content">
@@ -92,9 +96,11 @@ const User = () => {
                                                     <th className="text-start">Id</th>
                                                     {/* <th className="text-start">Logo</th> */}
                                                     {/* <th className="text-start">User Type</th> */}
-                                                    <th className="text-start">username</th>
+                                                    <th className="text-start">Instagram handle</th>
                                                     {/* <th className="text-start">Status</th> */}
                                                     <th className="text-start">name</th>
+                                                    <th className="text-start">Date Added</th>
+                                                    <th className="text-start">Count</th>
                                                     {/* <th className="text-start">Campaigns</th> */}
                                                 </tr>
                                             </thead>
@@ -124,6 +130,12 @@ const User = () => {
                                                                 </td>
                                                                 <td className="text-start">
                                                                     {i.name}
+                                                                </td>
+                                                                <td className="text-start">
+                                                                    {formatDate(i.createdAt)}
+                                                                </td>
+                                                                <td className="text-start">
+                                                                    {i.count}
                                                                 </td>
 
                                                             </tr>

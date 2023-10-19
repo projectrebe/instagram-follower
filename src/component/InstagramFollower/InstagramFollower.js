@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { saveUser } from '../../action/userAction'
-import User from '../User/User'
+// import User from '../User/User'
 // import axios from 'axios'
 const InstagramFollower = () => {
     const [name, setName] = useState('')

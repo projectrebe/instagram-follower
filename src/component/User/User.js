@@ -96,9 +96,9 @@ const User = () => {
                                                     <th className="text-start">Id</th>
                                                     {/* <th className="text-start">Logo</th> */}
                                                     {/* <th className="text-start">User Type</th> */}
+                                                    <th className="text-start">name</th>
                                                     <th className="text-start">Instagram handle</th>
                                                     {/* <th className="text-start">Status</th> */}
-                                                    <th className="text-start">name</th>
                                                     <th className="text-start">Date Added</th>
                                                     <th className="text-start">Count</th>
                                                     {/* <th className="text-start">Campaigns</th> */}
@@ -125,11 +125,12 @@ const User = () => {
                                                                 <td className="text-start">
                                                                     {i._id}
                                                                 </td>
-                                                                <td className="text-start">
-                                                                    {i.username}
-                                                                </td>
+
                                                                 <td className="text-start">
                                                                     {i.name}
+                                                                </td>
+                                                                <td className="text-start">
+                                                                    {i.username}
                                                                 </td>
                                                                 <td className="text-start">
                                                                     {formatDate(i.createdAt)}

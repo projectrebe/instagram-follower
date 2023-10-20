@@ -8,7 +8,7 @@ const InstagramFollower = () => {
     const [username, setUsername] = useState('')
     const [count, setCount] = useState()
     const dispatch = useDispatch();
-    const { error, loading, isAuthenticated } = useSelector((state) => state.user)
+    const { loading } = useSelector((state) => state.user)
     // let;
     const getCount = async (e) => {
         e.preventDefault();

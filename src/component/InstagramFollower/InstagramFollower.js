@@ -67,15 +67,21 @@ const InstagramFollower = () => {
                 <h1>Number of followers : {count}</h1>
                 <form onSubmit={getCount}>
                     <div className="mb-3">
-                        <label className="form-label">name</label>
-                        <input type="text" className="form-control" id="name" aria-describedby="emailHelp" value={name}
+                        <label className="form-label">Device ID</label>
+                        <input
+                            type="text"
+                            className="form-control"
+                            id="name" aria-describedby="emailHelp"
+                            value={name}
                             onChange={(e) => setName(e.target.value)}
                             required
+                            maxLength={10}
+                            minLength={10}
                         />
 
                     </div>
                     <div className="mb-3">
-                        <label className="form-label">username</label>
+                        <label className="form-label">Instagram Handle</label>
                         <input type="text" className="form-control" id="username" aria-describedby="emailHelp" value={username}
                             onChange={(e) => setUsername(e.target.value)}
                             required

@@ -96,7 +96,7 @@ const User = () => {
                                                     <th className="text-start">Id</th>
                                                     {/* <th className="text-start">Logo</th> */}
                                                     {/* <th className="text-start">User Type</th> */}
-                                                    <th className="text-start">name</th>
+                                                    <th className="text-start">Device ID</th>
                                                     <th className="text-start">Instagram handle</th>
                                                     {/* <th className="text-start">Status</th> */}
                                                     <th className="text-start">Date Added</th>
